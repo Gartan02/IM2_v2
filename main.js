@@ -22,14 +22,14 @@ import { getDocs, collection, getFirestore } from "https://www.gstatic.com/fireb
             userEmailSpan.textContent = user.email;
         } else {
             userEmailSpan.textContent = 'Not logged in';
-            window.location.href = 'login.html';
+            window.location.href = 'index.html';
         }
     });
 
     logoutButton.addEventListener('click', () => {
         auth.signOut().then(() => {
             alert('You have been logged out.');
-            window.location.href = 'login.html';
+            window.location.href = 'index.html';
         }).catch((error) => {
             console.error('Error logging out:', error);
         });
